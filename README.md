@@ -36,7 +36,7 @@ The website features:
 
 ## Getting Started
 
-Simply open `index.htm` in a web browser to view the website.
+
 
 ## Contributing
 
