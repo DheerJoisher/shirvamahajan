@@ -40,7 +40,7 @@ function Home() {
             </div>
           </div>
           <div className="hero-card" aria-label="Organization emblem and overview">
-            <img className="logo-mark" src="/favicon.png" alt="SBM logo" />
+            <img className="logo-mark" src="/../../favicon.png" alt="SBM logo" />
             <h3>A thriving community foundation</h3>
             <p>Committed to service, upliftment and the preservation of shared values.</p>
           </div>

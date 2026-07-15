@@ -41,7 +41,7 @@ function Navbar() {
     <header className={`site-header ${scrolled ? 'scrolled' : ''}`} id="top">
       <div className="nav-container">
         <a className="brand" href="#home" aria-label="Shri Shirva Bhanushali Mahajan home" onClick={(event) => handleAnchorClick(event, '#home')}>
-          <img className="brand-mark" src="/favicon.png" alt="SBM logo" />
+          <img className="brand-mark" src="/../../favicon.png" alt="SBM logo" />
           <span>Shri Shirva Bhanushali Mahajan</span>
         </a>
         <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="site-nav" aria-label="Open navigation menu" onClick={() => setMenuOpen((value) => !value)}>
