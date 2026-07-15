@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import logo from '../../favicon.png';
 import Lightbox from '../components/Lightbox';
 import { activities, announcements, committeeMembers, downloads, featureCards, galleryItems, stats, timelineItems } from '../data/homeData';
 
@@ -31,18 +32,16 @@ function Home() {
       <section className="hero" id="home" aria-labelledby="hero-title" ref={(element) => sectionRefs.current[0] = element}>
         <div className="container hero-grid">
           <div className="hero-copy">
-            <span className="floating-badge">Serving the Shirva community with dignity and purpose</span>
-            <h1 id="hero-title">Shri Shirva Bhanushali Mahajan</h1>
-            <p>A trusted community institution rooted in heritage, compassion and collective progress. We nurture education, welfare, culture and unity while creating lasting opportunities for every family and generation.</p>
+            <h1 id="hero-title">Shri Shirva Bhanushali Mahajan Trust</h1>
+            <p>A trusted community institution rooted in heritage, compassion and collective progress. We nurture education, welfare, culture and unity while creating lasting opportunities for every family and generation. Committed to service, upliftment and the preservation of shared values.</p>
             <div className="hero-actions">
               <a className="btn btn-primary" href="#about" onClick={(event) => onAnchorClick(event, '#about')}>Learn More</a>
               <a className="btn btn-secondary" href="#contact" onClick={(event) => onAnchorClick(event, '#contact')}>Contact Us</a>
             </div>
           </div>
           <div className="hero-card" aria-label="Organization emblem and overview">
-            <img className="logo-mark" src="/../../favicon.png" alt="SBM logo" />
-            <h3>A thriving community foundation</h3>
-            <p>Committed to service, upliftment and the preservation of shared values.</p>
+            <img className="logo-mark" src={logo} alt="SBM logo" />
+            <h3 className="hero-card-text">"Serving the Shirva community with dignity and purpose"</h3>
           </div>
         </div>
       </section>
@@ -197,17 +196,17 @@ function Home() {
             <div className={`event-card reveal ${visibleSections.size ? 'visible' : ''}`} ref={(element) => revealRefs.current[40] = element}>
               <h3>Past events</h3>
               <div className="past-events" id="past-events" aria-label="Past events carousel">
-                <article className="event-card" style={{ minWidth: '240px' }}>
+                <article className="event-card past-event-card">
                   <div className="event-meta"><span className="event-pill">March 2026</span></div>
                   <h4>Scholarship Distribution</h4>
                   <p>Recognizing students and supporting their next academic step.</p>
                 </article>
-                <article className="event-card" style={{ minWidth: '240px' }}>
+                <article className="event-card past-event-card">
                   <div className="event-meta"><span className="event-pill">January 2026</span></div>
                   <h4>Medical Camp</h4>
                   <p>Free screenings and awareness sessions for the community.</p>
                 </article>
-                <article className="event-card" style={{ minWidth: '240px' }}>
+                <article className="event-card past-event-card">
                   <div className="event-meta"><span className="event-pill">November 2025</span></div>
                   <h4>Heritage Festival</h4>
                   <p>A vibrant celebration of performance, food and cultural pride.</p>
