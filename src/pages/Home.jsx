@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import logo from '../../favicon.png';
+import './Hero.css';
+import './Home.css';
 import Lightbox from '../components/Lightbox';
 import { activities, announcements, committeeMembers, downloads, featureCards, galleryItems, stats, timelineItems } from '../data/homeData';
 
@@ -153,24 +155,6 @@ function Home() {
         </div>
       </section>
 
-      <section className="section" aria-labelledby="stats-title" ref={(element) => sectionRefs.current[6] = element}>
-        <div className="container">
-          <div className={`section-heading reveal ${visibleSections.size ? 'visible' : ''}`} ref={(element) => revealRefs.current[32] = element}>
-            <div>
-              <span className="eyebrow">Impact</span>
-              <h2 id="stats-title">A growing footprint of care</h2>
-            </div>
-          </div>
-          <div className="stats-grid">
-            {stats.map((stat, index) => (
-              <article className={`stat-card reveal ${visibleSections.size ? 'visible' : ''}`} key={stat.label} ref={(element) => counterRefs.current[index] = element}>
-                <div className="number" data-target={stat.target} data-counter-id={`stat-${index}`}>{counterValues[`stat-${index}`] || 0}</div>
-                <div className="label">{stat.label}</div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="section" id="events" aria-labelledby="events-title" ref={(element) => sectionRefs.current[7] = element}>
         <div className="container">
@@ -261,26 +245,6 @@ function Home() {
         </div>
       </section>
 
-      <section className="section" id="downloads" aria-labelledby="downloads-title" ref={(element) => sectionRefs.current[10] = element}>
-        <div className="container">
-          <div className={`section-heading reveal ${visibleSections.size ? 'visible' : ''}`} ref={(element) => revealRefs.current[52] = element}>
-            <div>
-              <span className="eyebrow">Downloads</span>
-              <h2 id="downloads-title">Useful documents for members</h2>
-            </div>
-          </div>
-          <div className="downloads-grid">
-            {downloads.map((item, index) => (
-              <article className={`download-card reveal ${visibleSections.size ? 'visible' : ''}`} key={item.title} ref={(element) => revealRefs.current[53 + index] = element}>
-                <div className="icon" aria-hidden="true">â¬‡</div>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-                <a className="btn btn-muted" href="#" aria-label={`Download ${item.title}`}>Download</a>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="section" id="donation" aria-labelledby="donation-title" ref={(element) => sectionRefs.current[11] = element}>
         <div className="container">
@@ -325,11 +289,11 @@ function Home() {
               <h3>Office details</h3>
               <p><strong>Address:</strong> Office No. 1, Amrut Tower, Sarojini Naidu Road, Tambe Nagar, Mulund West, Mumbai, Maharashtra 400080</p>
               <p><strong>Phone:</strong> +91 98765 43210</p>
-              <p><strong>Email:</strong> contact@shirvabhanushalmahajan.org</p>
+              <p><strong>Email:</strong> contact@shirvamahajan.org</p>
               <p><strong>Office Hours:</strong> Monday to Saturday, 9:30 AM to 6:30 PM</p>
             </article>
             <div className={`contact-card reveal ${visibleSections.size ? 'visible' : ''}`} ref={(element) => revealRefs.current[63] = element}>
-              <iframe className="map-frame" title="Location map for Shri Shirva Bhanushali Mahajan" loading="lazy" src="https://www.google.com/maps?q=19.1725656,72.9425113&z=17&output=embed"></iframe>
+              <iframe className="map-frame" title="Location map for Shri Shirva Bhanushali Mahajan" loading="lazy" src="https://www.google.com/maps?q=19.1772052,72.9551395&z=17&output=embed"></iframe>
             </div>
           </div>
         </div>
@@ -341,5 +305,4 @@ function Home() {
 }
 
 export default Home;
-
 

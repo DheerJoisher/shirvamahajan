@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import './BackToTop.css';
 
 function ScrollToTop() {
   const [visible, setVisible] = useState(false);
