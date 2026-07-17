@@ -268,11 +268,11 @@
   }
   .site-nav.mobile-menu {
   position: fixed;
-  top: var(--header-height);
+  top: 72px;
+height: calc(100dvh - 72px);
   left: 0;
   right: 0;
   width: 100%;
-  height: calc(100dvh - var(--header-height));
   background: #fff;
   overflow-y: auto;
   border: none;
