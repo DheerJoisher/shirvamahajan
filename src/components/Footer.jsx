@@ -28,7 +28,7 @@ function Footer() {
             <FaEnvelope />
           </a>
 
-          <a href="tel:+919876543210" aria-label="Phone">
+          <a href="tel:+919082512299" aria-label="Call +91 90825 12299">
             <FaPhoneAlt />
           </a>
         </div>
@@ -71,7 +71,7 @@ function Footer() {
           </li>
 
           <li>
-            <a href="mailto:contact@shirvamahajan.org">Contact</a>
+            <a href="#contact" onClick={(e) => scrollToSection(e, "#contact")}>Contact</a>
           </li>
         </ul>
 

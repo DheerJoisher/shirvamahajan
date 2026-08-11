@@ -35,7 +35,7 @@ function Home() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <h1 id="hero-title">Shri Shirva Bhanushali Mahajan Trust</h1>
-            <p>A trusted community institution rooted in heritage, compassion and collective progress. We nurture education, welfare, culture and unity while creating lasting opportunities for every family and generation. Committed to service, upliftment and the preservation of shared values.</p>
+            <p>Serving the Shirva Bhanushali community with heritage, compassion and collective progress. Rooted in Shirva village, Mandvi Taluka, Kachchh, Gujarat, we nurture education, welfare, culture and unity across generations.</p>
             <div className="hero-actions">
               <a className="btn btn-primary" href="#about" onClick={(event) => onAnchorClick(event, '#about')}>Learn More</a>
               <a className="btn btn-secondary" href="#contact" onClick={(event) => onAnchorClick(event, '#contact')}>Contact Us</a>
@@ -45,6 +45,27 @@ function Home() {
             <img className="logo-mark" src={logo} alt="SBM logo" />
             <h3 className="hero-card-text">"Serving the Shirva community with dignity and purpose"</h3>
           </div>
+        </div>
+      </section>
+
+      <section className="section village-overview" aria-labelledby="village-title">
+        <div className="container">
+          <div className={`section-heading reveal ${visibleSections.size ? 'visible' : ''}`} ref={(element) => revealRefs.current[7] = element}>
+            <div>
+              <span className="eyebrow">Shirva Village</span>
+              <h2 id="village-title">Rooted in Kachchh, connected to Mandvi</h2>
+            </div>
+            <p>Shirva is a rural village in Mandvi Taluka, Kachchh district, Gujarat, located around 7 km from Mandvi on Gujarat State Highway 6. It is administered by the Shirva Gram Panchayat under the Mandvi Community Development Block.</p>
+          </div>
+          <div className="stats-grid" aria-label="Shirva village demographic highlights">
+            {stats.map((stat, index) => (
+              <article className={`stat-card reveal ${visibleSections.size ? 'visible' : ''}`} key={stat.label} ref={(element) => counterRefs.current[index] = element} data-counter-id={`stat-${index}`} data-target={stat.target}>
+                <span className="number">{counterValues[`stat-${index}`] || '0'}</span>
+                <span className="label">{stat.label}</span>
+              </article>
+            ))}
+          </div>
+          <p className="village-note">The village is served by local public and private buses, with railway access approximately 5–10 km away.</p>
         </div>
       </section>
 
@@ -288,7 +309,7 @@ function Home() {
             <article className={`contact-card reveal ${visibleSections.size ? 'visible' : ''}`} ref={(element) => revealRefs.current[62] = element}>
               <h3>Office details</h3>
               <p><strong>Address:</strong> Office No. 1, Amrut Tower, Sarojini Naidu Road, Tambe Nagar, Mulund West, Mumbai, Maharashtra 400080</p>
-              <p><strong>Phone:</strong> +91 98765 43210</p>
+              <p><strong>Phone:</strong> <a href="tel:+919082512299">+91 90825 12299</a></p>
               <p><strong>Email:</strong> contact@shirvamahajan.org</p>
               <p><strong>Office Hours:</strong> Monday to Saturday, 9:30 AM to 6:30 PM</p>
             </article>
@@ -305,4 +326,3 @@ function Home() {
 }
 
 export default Home;
-
